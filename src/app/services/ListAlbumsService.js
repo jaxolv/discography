@@ -7,7 +7,7 @@ const ListAlbumsService = {
             "TOOL",
             "Opiate (EP)",
             1992,
-            ["Sweat", "Hush", "Part of Me", "Cold and Ugly (live)", "Jerk-Off (live)", "Opiate"],
+            [],
             26.52,
             true)
 
@@ -16,7 +16,7 @@ const ListAlbumsService = {
             "TOOL",
             "Undertow",
             1993,
-            ["Intolerance", "Prison Sex", "Sober", "Bottom", "Crawl Away", "Swamp Song", "Undertow", "4°", "Flood", "Disgustipated"],
+            [],
             69.13,
             true)
 
@@ -25,7 +25,7 @@ const ListAlbumsService = {
             "TOOL",
             "Ænima",
             1996,
-            ["Stinkfist", "Eulogy", "H.", "Useful Idiot", "Forty Six & 2", "Message to Harry Manback", "Hooker with a Penis", "Intermission", "Jimmy", "Die Eier von Satan", "Pushit", "Cesaro Summability", "Ænema", "(-)", "Third Eye"],
+            [],
             77.18,
             true)
         
