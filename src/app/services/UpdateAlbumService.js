@@ -1,7 +1,7 @@
 const ListAlbumsService = require('../services/ListAlbumsService')
 
 const UpdateAlbumService = {
-    updateAlbumService: (
+    updateAlbum: (
         id,
         band,
         title,
@@ -10,7 +10,7 @@ const UpdateAlbumService = {
         duration,
         streaming
     ) => {
-        const albums = ListAlbumsService.listAlbumsService()
+        const albums = ListAlbumsService.listAlbums()
 
         const albumIndex = albums.findIndex(album => album.id === Number(id))
 
@@ -28,7 +28,7 @@ const UpdateAlbumService = {
             streaming
         }
 
-        return albums[albumIndex]
+        return albums
     }
 }
 

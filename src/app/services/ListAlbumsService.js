@@ -1,7 +1,7 @@
 const AlbumModel = require('../models/AlbumModel')
 
 const ListAlbumsService = {
-    listAlbumsService: () => {
+    listAlbums: () => {
         const opiate = new AlbumModel(
             0,
             "TOOL",

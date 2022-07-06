@@ -1,10 +1,11 @@
-const discography = require('../models/emptyArray')
 const CreateAlbumService = require('../services/CreateAlbumService')
 const ListAlbumsService = require('../services/ListAlbumsService')
 const UpdateAlbumService = require('../services/UpdateAlbumService')
+const DeleteAlbumService = require('../services/DeleteAlbumService')
+
 const { v4 } = require('uuid')
 
-albums = []
+const discography = []
 
 const controller = {
     create: (req, res) => {
@@ -33,7 +34,7 @@ const controller = {
     },
 
     list: (req, res) => {
-        const listAlbumsService = ListAlbumsService.listAlbumsService()
+        const listAlbumsService = ListAlbumsService.listAlbums()
         return res.json(listAlbumsService)
     },
 
@@ -48,7 +49,7 @@ const controller = {
             streaming
         } = req.body
 
-        const updatedAlbum = UpdateAlbumService.updateAlbumService(
+        const listUpdated = UpdateAlbumService.updateAlbum(
             Number(id),
             band,
             title,
@@ -58,7 +59,15 @@ const controller = {
             streaming
         )
 
-        res.json(updatedAlbum)
+        res.json(listUpdated)
+    },
+
+    delete: (req, res) => {
+        const { id } = req.params
+
+        const listUpdated = DeleteAlbumService.deleteAlbum(id)
+
+        res.json(listUpdated)
     }
 }
 
