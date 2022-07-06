@@ -1,10 +1,13 @@
 const discography = require('../models/emptyArray')
 const CreateAlbumService = require('../services/CreateAlbumService')
+const ListAlbumsService = require('../services/ListAlbumsService')
+const { v4 } = require('uuid')
+
+albums = []
 
 const controller = {
     create: (req, res) => {
         const {
-            id,
             band,
             title,
             year,
@@ -14,7 +17,7 @@ const controller = {
         } = req.body;
 
         const newAlbum = CreateAlbumService.createAlbum(
-            id,
+            v4(),
             band,
             title,
             year,
@@ -26,6 +29,11 @@ const controller = {
         discography.push(newAlbum)
 
         return res.json(discography)
+    },
+    
+    list: (req, res) => {
+        const listAlbumsService = ListAlbumsService.listAlbumsService()
+        return res.json(listAlbumsService)
     }
 }
 

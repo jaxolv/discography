@@ -1,5 +1,4 @@
 const AlbumModel = require('../models/AlbumModel')
-const { v4 } = require('uuid')
 
 const CreateAlbumService = {
     createAlbum: (
@@ -12,7 +11,7 @@ const CreateAlbumService = {
         streaming
     ) => {
         const album = new AlbumModel(
-            v4(),
+            id,
             band,
             title,
             year,
